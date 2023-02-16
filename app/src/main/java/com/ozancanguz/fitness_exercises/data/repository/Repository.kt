@@ -1,4 +1,4 @@
-package com.ozancanguz.fitness_exercises.data
+package com.ozancanguz.fitness_exercises.data.repository
 
 import com.ozancanguz.fitness_exercises.data.remote.RemoteDataSource
 import dagger.hilt.android.scopes.ViewModelScoped

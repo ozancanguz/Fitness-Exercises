@@ -5,7 +5,7 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.ozancanguz.fitness_exercises.data.Repository
+import com.ozancanguz.fitness_exercises.data.repository.Repository
 import com.ozancanguz.fitness_exercises.data.model.Exercise
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
