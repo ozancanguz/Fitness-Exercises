@@ -20,6 +20,7 @@ class ExerciseAdapter:RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder>()
 
     fun setData(newData:Exercise){
         this.exerciseList=newData
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseViewHolder {

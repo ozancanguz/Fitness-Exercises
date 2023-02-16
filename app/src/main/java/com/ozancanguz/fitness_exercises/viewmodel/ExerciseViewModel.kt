@@ -23,7 +23,7 @@ class ExerciseViewModel@Inject constructor(private val repository: Repository, a
             if(response.isSuccessful){
                 exerciseList.postValue(response.body())
             }else{
-                Log.d("viewmodel","No data")
+                Log.e("viewmodel","No data")
             }
         }
     }

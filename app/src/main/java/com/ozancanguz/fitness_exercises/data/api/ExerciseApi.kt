@@ -9,7 +9,7 @@ import retrofit2.http.Headers
 interface ExerciseApi {
 
      @Headers("Authorization: Bearer 844|nHc5uSAr948kWrcy1fFkfVqlIRGpvBMkYMjQgBdi")
-    @GET("exercise+database+api/313/list+of+all+exercise")
+    @GET("313/list+of+all+exercise")
      suspend fun getExercises(): Response<Exercise>
 
 
