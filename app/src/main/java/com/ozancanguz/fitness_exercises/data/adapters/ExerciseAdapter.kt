@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.ozancanguz.fitness_exercises.R
 import com.ozancanguz.fitness_exercises.data.model.Exercise
 import com.ozancanguz.fitness_exercises.data.model.ExerciseItem
@@ -31,7 +32,8 @@ class ExerciseAdapter:RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder>()
            val currentExercise=exerciseList[position]
         holder.itemView.rv_nametv.text=currentExercise.name
 
-
+        // glide image loading
+        holder.itemView.rv_img.load(currentExercise.gifUrl)
     }
 
     override fun getItemCount(): Int {
