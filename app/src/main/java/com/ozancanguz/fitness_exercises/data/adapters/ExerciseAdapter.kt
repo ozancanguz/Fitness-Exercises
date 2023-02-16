@@ -4,11 +4,16 @@ import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.bumptech.glide.Glide
 import com.ozancanguz.fitness_exercises.R
 import com.ozancanguz.fitness_exercises.data.model.Exercise
 import com.ozancanguz.fitness_exercises.data.model.ExerciseItem
+import com.ozancanguz.fitness_exercises.ui.fragments.exerciselist.ExerciseListFragment
+import com.ozancanguz.fitness_exercises.ui.fragments.exerciselist.ExerciseListFragmentDirections
+import com.ozancanguz.fitness_exercises.util.Util.Companion.loadImage
 import kotlinx.android.synthetic.main.exercise_row_layout.view.*
 
 class ExerciseAdapter:RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder>() {
@@ -34,7 +39,15 @@ class ExerciseAdapter:RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder>()
         holder.itemView.rv_nametv.text=currentExercise.name
 
         // glide image loading
-        holder.itemView.rv_img.load(currentExercise.gifUrl)
+        holder.itemView.rv_img.loadImage(currentExercise.gifUrl)
+
+
+
+        // nav safe args to details
+        holder.itemView.setOnClickListener {
+            val direction=ExerciseListFragmentDirections.actionExerciseListFragmentToDetailsFragment(currentExercise)
+            holder.itemView.findNavController().navigate(direction)
+        }
     }
 
     override fun getItemCount(): Int {

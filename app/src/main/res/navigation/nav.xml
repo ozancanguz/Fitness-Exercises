@@ -22,5 +22,8 @@
         <action
             android:id="@+id/action_detailsFragment_to_exerciseListFragment"
             app:destination="@id/exerciseListFragment" />
+        <argument
+            android:name="currentExe"
+            app:argType="com.ozancanguz.fitness_exercises.data.model.ExerciseItem" />
     </fragment>
 </navigation>

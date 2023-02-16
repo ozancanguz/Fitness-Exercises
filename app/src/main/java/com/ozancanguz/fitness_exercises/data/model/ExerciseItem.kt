@@ -1,8 +1,11 @@
 package com.ozancanguz.fitness_exercises.data.model
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class ExerciseItem(
     @SerializedName("bodyPart")
     val bodyPart: String,
@@ -16,4 +19,4 @@ data class ExerciseItem(
     val name: String,
     @SerializedName("target")
     val target: String
-)
+):Parcelable
