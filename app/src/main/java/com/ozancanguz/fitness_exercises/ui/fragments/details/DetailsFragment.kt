@@ -6,9 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ozancanguz.fitness_exercises.R
+import com.ozancanguz.fitness_exercises.databinding.FragmentDetailsBinding
 
 
 class DetailsFragment : Fragment() {
+
+       private var _binding: FragmentDetailsBinding? = null
+
+    private val binding get() = _binding!!
+
+
+
 
 
     override fun onCreateView(
@@ -16,7 +24,11 @@ class DetailsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_details, container, false)
+          _binding = FragmentDetailsBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+        return view
+
     }
 
 
