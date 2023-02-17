@@ -1,10 +1,11 @@
 # Fitness-Exercises
 
--I have developed a android mobile application demonstrate more than
+-I have developed a android mobile application that demonstrates more than
  fitness exercise and give information about it.
 
 # DEMO
 
+![fitness-app](https://user-images.githubusercontent.com/64928807/219519024-102b1bbc-8cb5-405c-9b85-cf25a967ebdc.gif)
 
 
 
