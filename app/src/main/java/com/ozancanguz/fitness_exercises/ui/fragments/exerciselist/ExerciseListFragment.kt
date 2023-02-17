@@ -48,9 +48,12 @@ class ExerciseListFragment : Fragment() {
     }
 
     private fun observeLiveData() {
+        binding.pb.visibility=View.VISIBLE
         exerciseViewModel.getExercises()
         exerciseViewModel.exerciseList.observe(viewLifecycleOwner, Observer {
             adapter.setData(it)
+            binding.pb.visibility=View.INVISIBLE
+
         })
 
     }
